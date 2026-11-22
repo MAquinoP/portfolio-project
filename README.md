@@ -64,7 +64,7 @@ BUCKET=$(aws cloudformation describe-stacks \
   --query "Stacks[0].Outputs[?OutputKey=='SiteBucketName'].OutputValue" \
   --output text)
 
-aws s3 sync site "s3://$BUCKET/"
+aws s3 sync site "s3://$BUCKET/" --delete
 ```
 
 Después abre la URL que aparece en la salida `SiteUrl`.

@@ -3,6 +3,7 @@ cdk.out/
 *.js
 *.d.ts
 !jest.config.js
+!site/script.js
 
 .DS_Store
 Thumbs.db
@@ -16,3 +17,5 @@ Thumbs.db
 .env.*
 *.pem
 credentials
+
+datos-portafolio.txt

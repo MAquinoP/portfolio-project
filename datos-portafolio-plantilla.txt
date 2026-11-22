@@ -1,0 +1,121 @@
+DATOS
+
+
+NOMBRE COMPLETO
+Nombre Apellido
+
+
+TITULAR PROFESIONAL
+Titulo profesional
+
+
+SOBRE TI
+Dos o tres frases sobre tu recorrido, que haces hoy y hacia donde vas.
+Menciona las tecnologias o areas en las que te mueves y el tipo de
+problemas que te interesa resolver.
+
+
+HABILIDADES
+
+Tecnicas (bloque "Tecnologias"):
+  Tecnologia 1
+  Tecnologia 2
+  Tecnologia 3
+  Tecnologia 4
+  Tecnologia 5
+  Tecnologia 6
+  Tecnologia 7
+
+Herramientas (bloque "Herramientas"):
+  Herramienta 1
+  Herramienta 2
+  Herramienta 3
+  Herramienta 4
+  Herramienta 5
+  Herramienta 6
+  Herramienta 7
+  Herramienta 8
+  Herramienta 9
+
+
+FORMACION
+
+AAAA - Actualidad
+  Institucion
+  Titulo o programa
+  En curso
+
+AAAA/MM - AAAA/MM
+  Institucion
+  Titulo o programa
+
+AAAA/MM - AAAA/MM
+  Institucion
+  Titulo o programa
+
+AAAA/MM - AAAA/MM
+  Institucion
+  Titulo o programa
+
+
+CERTIFICACIONES
+
+Nombre de la certificacion
+  Emitida por Entidad emisora
+  AAAA/MM - AAAA/MM
+  Enlace de verificacion
+
+Nombre de la certificacion
+  Emitida por Entidad emisora
+  AAAA/MM - AAAA/MM
+  Enlace de verificacion
+
+
+PROYECTOS PREVIOS
+
+Proyecto uno
+  Una o dos lineas sobre que era el proyecto, para quien y que hiciste tu.
+  Demo:   https://usuario.github.io/proyecto-uno
+  Codigo: https://github.com/usuario/proyecto-uno
+
+Proyecto dos
+  Una o dos lineas sobre que era el proyecto, para quien y que hiciste tu.
+  Demo:   https://usuario.github.io/proyecto-dos
+  Codigo: https://github.com/usuario/proyecto-dos
+
+Proyecto tres
+  Una o dos lineas sobre que era el proyecto, para quien y que hiciste tu.
+  Demo:   https://usuario.github.io/proyecto-tres
+  Codigo: https://github.com/usuario/proyecto-tres
+
+
+IDIOMAS
+Idioma 1, nivel
+Idioma 2, nivel
+
+
+DATOS DE CONTACTO
+Correo:   correo@ejemplo.com
+LinkedIn: https://www.linkedin.com/in/usuario/
+GitHub:   https://github.com/usuario
+Usuario:  usuario
+
+
+CV EN PDF
+https://usuario.github.io/portafolio/files/CV.pdf
+
+
+MATERIAL VISUAL (Solo aplico si te lo pido explicitamente, la plantilla ya esta en este formato)
+
+Paleta de colores
+  Fondo:            #272829
+  Fondo de tarjeta: #363739
+  Superficie:       #2d2f32
+  Texto:            #fff6e0
+  Texto secundario: #d8d9da
+  Gris:             #61677a
+  Acento:           #ffc94a
+  Degradado del titular: #944ae9, #e0a4bf, #e25494
+
+Tipografias
+  Lexend Deca
