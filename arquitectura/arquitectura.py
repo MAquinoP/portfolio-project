@@ -12,7 +12,6 @@ def icon_root():
 ICONS = icon_root()
 
 ICON = {
-    "waf": "security/waf.png",
     "cloudfront": "network/cloudfront.png",
     "s3": "storage/simple-storage-service-s3.png",
     "apigateway": "network/api-gateway.png",
@@ -172,7 +171,7 @@ def build_runtime():
     c = Canvas(1860, 1120, "Portafolio serverless en AWS")
 
     c.zone(150, 40, 1500, 1000, "AWS Cloud", "#232f3e", "#fcfcfd")
-    c.zone(195, 285, 385, 335, "Borde global", BLUE, "#eff6ff", dashed=True)
+    c.zone(230, 400, 290, 220, "Borde global", BLUE, "#eff6ff", dashed=True)
     c.zone(620, 110, 910, 895, "Region  us-east-1", "#0f766e", "#f8fafc", dashed=True)
     c.zone(655, 150, 260, 210, "Origen del sitio", GREEN, "#ecfdf5")
     c.zone(655, 400, 645, 210, "API de contacto", PURPLE, "#f5f3ff")
@@ -180,8 +179,7 @@ def build_runtime():
     c.zone(1105, 730, 390, 240, "Datos y correo", GREEN, "#ecfdf5")
 
     c.node(72, 500, "users", ["Visitante"])
-    c.node(478, 350, "waf", ["AWS WAF", "protege la entrega"])
-    c.node(420, 500, "cloudfront", ["CloudFront"])
+    c.node(410, 500, "cloudfront", ["CloudFront"])
     c.node(785, 250, "s3", ["S3 privado"])
     c.node(790, 500, "apigateway", ["API Gateway REST"])
     c.node(1120, 500, "lambda", ["Lambda contact"])
@@ -191,9 +189,9 @@ def build_runtime():
     c.node(1420, 860, "ses", ["SES"])
     c.node(1740, 860, "user", ["Buzon del dueno"])
 
-    c.arrow([(115, 500), (375, 500)], "1. HTTPS", BLUE, label_at=(245, 486))
-    c.arrow([(420, 457), (420, 250), (740, 250)], "2.  /  cacheado", GREEN, label_at=(580, 236))
-    c.arrow([(463, 500), (745, 500)], "3.  /contacto  sin cache", PURPLE, label_at=(604, 486))
+    c.arrow([(115, 500), (367, 500)], "1. HTTPS", BLUE, label_at=(241, 486))
+    c.arrow([(410, 457), (410, 250), (740, 250)], "2.  /  cacheado", GREEN, label_at=(575, 236))
+    c.arrow([(453, 500), (745, 500)], "3.  /contacto  sin cache", PURPLE, label_at=(599, 486))
     c.arrow([(833, 500), (1075, 500)], "4. AWS_PROXY", PURPLE, label_at=(954, 486))
     c.arrow([(1163, 485), (1420, 485), (1420, 815)], "6. SendEmail", GREEN, label_at=(1290, 471))
     c.arrow([(1163, 515), (1230, 515), (1230, 815)], "5. PutItem", GREEN, label_at=(1312, 660))

@@ -13,6 +13,8 @@ Thumbs.db
 *.out
 *.toc
 
+CLAUDE.local.md
+
 .env
 .env.*
 *.pem

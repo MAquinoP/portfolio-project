@@ -14,10 +14,9 @@ if (typeof student !== "string" || !/^[a-z0-9-]{2,20}$/.test(student)) {
   throw new Error("Pass your name with: cdk synth -c student=<lowercase-name>");
 }
 
-const enableWaf = app.node.tryGetContext("enableWaf") !== "false";
-
-new PortfolioStack(app, `portafolio-${student}`, {
+const stack = new PortfolioStack(app, `portafolio-${student}`, {
   ownerEmail,
-  enableWaf,
   env: { region: "us-east-1" },
 });
+
+cdk.Tags.of(stack).add("student", student);

@@ -8,7 +8,6 @@ export interface EdgeDistributionProps {
   readonly siteBucket: s3.IBucket;
   readonly contactApi: apigateway.RestApi;
   readonly contactPath: string;
-  readonly webAclArn?: string;
 }
 
 export class EdgeDistribution extends Construct {
@@ -21,7 +20,6 @@ export class EdgeDistribution extends Construct {
       defaultRootObject: "index.html",
       priceClass: cloudfront.PriceClass.PRICE_CLASS_100,
       httpVersion: cloudfront.HttpVersion.HTTP2_AND_3,
-      webAclId: props.webAclArn,
       defaultBehavior: {
         origin: origins.S3BucketOrigin.withOriginAccessControl(props.siteBucket),
         viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,

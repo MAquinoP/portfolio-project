@@ -11,23 +11,22 @@ Despliega un portafolio personal sobre una arquitectura real: sitio estático se
 El recorrido de una petición, siguiendo los números del diagrama:
 
 1. El visitante entra por **CloudFront**, que sirve el sitio sobre HTTPS desde ubicaciones de borde.
-2. **AWS WAF** inspecciona cada petición antes de que llegue, con reglas comunes y un límite por IP sobre el formulario.
-3. La ruta raíz se sirve desde un bucket de **S3 privado**, al que solo CloudFront puede leer.
-4. La ruta `/contacto` va a **API Gateway**, sin caché.
-5. **Lambda** valida el mensaje.
-6. Lo guarda en **DynamoDB**.
-7. Lo envía por **SES** al correo del dueño.
-8. Los registros quedan en **CloudWatch**.
+2. La ruta raíz se sirve desde un bucket de **S3 privado**, al que solo CloudFront puede leer.
+3. La ruta `/contacto` va a **API Gateway**, sin caché.
+4. **Lambda** valida el mensaje.
+5. Lo guarda en **DynamoDB**.
+6. Lo envía por **SES** al correo del dueño.
+7. Los registros quedan en **CloudWatch**.
 
-CloudFront y WAF son servicios globales, por eso aparecen fuera de la región en el diagrama. Esa es también la razón de que la pila exija `us-east-1`: las Web ACL para CloudFront solo se crean ahí.
+CloudFront es un servicio global, por eso aparece fuera de la región en el diagrama: sirve el sitio desde ubicaciones de borde repartidas por el mundo, mientras el resto de los recursos vive en una sola región. La pila se despliega en `us-east-1`.
 
 ## Qué cuesta
 
-Alrededor de **7 USD al mes**, y casi todo es costo fijo del WAF: 5 por la Web ACL, 1 por la regla de tasa y 1 por el grupo de reglas administrado. El resto cae dentro de capas gratuitas a este volumen.
+**Menos de 1 USD al mes** con el tráfico de un portafolio personal. A este volumen casi todo cae dentro de capas gratuitas: CloudFront regala 1 TB de salida y 10 millones de peticiones al mes, y Lambda 1 millón de invocaciones.
 
-El cobro es por hora, así que desplegar, probar y eliminar en la misma sesión cuesta centavos. Desplegando sin WAF (`-c enableWaf=false`) el total baja de 1 USD al mes.
+El cobro es por hora y por uso, así que desplegar, probar y eliminar en la misma sesión cuesta centavos.
 
-La pila crea un presupuesto con avisos a los 5 y a los 8 USD. Avisa, no detiene el gasto.
+La pila crea un presupuesto con avisos a 1 y a 5 USD. Avisa, no detiene el gasto.
 
 ## Requisitos
 
